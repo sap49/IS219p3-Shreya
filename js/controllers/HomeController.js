@@ -100,7 +100,7 @@ app.controller('HomeController', ['$scope', function($scope) {
 	
 $scope.title = "Shreya's Top 8 Movies";
 $scope.owner = "Shreya";
-$scope.github = "https://github.com/sap49/IS219s18p3Shreya";
+$scope.github = "https://github.com/sap49/IS219p3-Shreya";
 	
 	
 	
