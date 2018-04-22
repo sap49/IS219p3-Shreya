@@ -110,7 +110,7 @@ app.controller('HomeController', ['$scope', function($scope) {
       runtime:	116,
       released:	new Date('1994'),
       country:	'USA',
-      posters:	['img/darkknight.jpg','img/darkknight2.jpg'],
+      posters:	['img/Speed.jpg'],
       imdb:		'http://www.imdb.com/title/tt0111257/',
       website:	'https://www.facebook.com/Speed50Mph/',
       likes:	828,
@@ -130,28 +130,40 @@ app.controller('HomeController', ['$scope', function($scope) {
       likes:	207706,
       dislikes:	23908,
       posterindex: 0
-	}
-	
-	
+      }	
   ];
-	
+  
 	
 	/* ADD VARIABLES FOR STEP 3 HERE */
 	
-$scope.title = "Shreya's Top 8 Movies";
-$scope.owner = "Shreya";
-$scope.github = "https://github.com/sap49/IS219p3-Shreya";
+      $scope.title = "Shreya's Top 8 Movies";
+      $scope.owner = "Shreya";
+      $scope.github = "https://github.com/sap49/IS219p3-Shreya";
 	
 	
 	
 	/* ADD FUNCTIONS FOR STEP 7 HERE */
 		
-	
-	
-	
-	
-	
-	
-	
+      $scope.like = function (index) {
+            $scope.products[index].likes += 1;
+      };
+      $scope.minusOne = function (index) {
+            $scope.products[index].dislikes += 1;
+      };
+      $scope.posterClick = function(index){
+            if ($scope.movies[index].posterindex > $scope.movies[index].posters.length - 1) {
+                  $scope.movies[index].posterindex = 0;
+            } else {
+                  $scope.movies[index].posterindex++;
+
+             }
+     };
+
+      $scope.timeText= function(minutes){
+            $scope.hours = (Math.floor(Math.abs(minutes) / 60));  
+            $scope.minutes = (Math.abs(minutes) % 60);  
+            return  $scope.hours +'hrs '+$scope.minutes + 'min';  
+      } ; 
+
 	
 }]);
