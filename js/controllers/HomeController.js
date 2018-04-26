@@ -96,7 +96,7 @@ app.controller('HomeController', ['$scope', function($scope) {
       runtime:	120,
       released:	new Date('1998'),
       country:	'USA',
-      posters:	['img/Deepimpact.jpg',],
+      posters:	['img/Deepimpact.jpg','img/Deepimpact2.jpg'],
       imdb:		'http://www.imdb.com/title/tt0120647/?ref_=nv_sr_1',
       website:	'https://www.facebook.com/Deep-Impact-50528340969/',
       likes:	1021,
@@ -110,7 +110,7 @@ app.controller('HomeController', ['$scope', function($scope) {
       runtime:	116,
       released:	new Date('1994'),
       country:	'USA',
-      posters:	['img/Speed.jpg'],
+      posters:	['img/Speed.jpg','img/Speed2.jpg'],
       imdb:		'http://www.imdb.com/title/tt0111257/',
       website:	'https://www.facebook.com/Speed50Mph/',
       likes:	828,
@@ -124,7 +124,7 @@ app.controller('HomeController', ['$scope', function($scope) {
       runtime:	194,
       released:	new Date('1993'),
       country:	'USA',
-      posters:	['img/titanic.jpg'],
+      posters:	['img/titanic.jpg', 'img/titanic2.jpg'],
       imdb:		'http://www.imdb.com/title/tt0120338/?ref_=nv_sr_2',
       website:	'https://www.facebook.com/TitanicMovie/',
       likes:	207706,
@@ -145,16 +145,16 @@ app.controller('HomeController', ['$scope', function($scope) {
 	/* ADD FUNCTIONS FOR STEP 7 HERE */
 		
       $scope.like = function (index) {
-            $scope.products[index].likes += 1;
+            $scope.movies[index].likes += 1;
       };
-      $scope.minusOne = function (index) {
-            $scope.products[index].dislikes += 1;
+      $scope.dislike = function (index) {
+            $scope.movies[index].dislikes += 1;
       };
       $scope.posterClick = function(index){
-            if ($scope.movies[index].posterindex > $scope.movies[index].posters.length - 1) {
-                  $scope.movies[index].posterindex = 0;
+            if ($scope.movies[index].posterindex < $scope.movies[index].posters.length - 1) {
+                  $scope.movies[index].posterindex += 1;
             } else {
-                  $scope.movies[index].posterindex++;
+                  $scope.movies[index].posterindex = 0;
 
              }
      };
