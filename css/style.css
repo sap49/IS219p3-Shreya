@@ -75,9 +75,10 @@ body {
     text-align: center;
     width: 80px;
     position: absolute;
+    border-radius: 50%;
     top: 50px;
     right: 25px;
-    border-radius: 50%;
+    
 }
 
 /* This contains your like and dislike buttons */
@@ -140,17 +141,17 @@ body {
 
 /* ADD YOUR LIKE AND DISLIKE HOVER/MOUSEOVER CSS CODE HERE */
 
-.like{
+.likes:hover {
 
 	background-color: #9edd87;
     color: #008700;
-    transition: all 500ms ease;
+    /*transition: all  ease;*/
 } 
-.dislike{
+.dislikes:hover {
 	
 	background-color: #fdd6d6;
     color: #F65A5B;
-    transition: all 500ms ease;
+    transition: all  ease;
 }
 
 
