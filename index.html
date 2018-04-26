@@ -35,38 +35,26 @@
       
       <div class="container">
 
-        <div class="col-md-6"> 
-            <div class="thumbnail">
-						
-					<img class="poster" img src = "{{movies[0].posters[0]}}"> 
-					<div class="imageInfo" {{movies[0].posterindex}}></div>
-					
-					<p class="title" >{{movies[0].title}} {{movies[0].country}}
-					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{movies[0].iscore}} </p>
-					<p class="runtime">Runtime: {{movies[0].runtime}}</p> 
-					<p class="released">Released: {{movies[0].released}} | Rated: {{movies[0].rating}}</p>
-					<p class="websites">Websites: <a>{{movie[0].imdb}}</a> | <a>{{movies[0].website}}</a></p>
-					
-		            <div class="social">
-		              <p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{movies[0].like}}</p>
-		              <p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{movies[0].dislike}}</p>
-								</div>
-								
-            </div> 
+			<div ng-repeat="movie in movies" class="col-md-6"> 
+					<div class="thumbnail">
+		
+						<img class="poster" ng-click="posterClick($index)" ng-src = "{{movies[$index].posters[movies[$index].posterindex]}}"> 
+						<div class="imageInfo">Current Poster:{{movies[$index].posterindex}} Total Poster: {{movies[$index].posters.length}}</div>
+							
+							<p class="title" >{{movies[$index].title}} ({{movies[$index].country}})</p> 
+							<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{movies[$index].iscore}} </p>
+							<p class="runtime">Runtime: {{timeText(movies[$index].runtime)}}</p> 
+							<p class="released">Released: {{movies[$index].released | date}} | Rated: {{movies[$index].rating}}</p>
+							<p class="websites">Websites: <a ng-href="{{movies[$index].imdb}}">{{movies[$index].imdb}}</a> | <a ng-href="{{movies[$index].website}}">{{movie.website}}</a></p>
+							
+							<div class="social">
+							  <p class="likes" ng-click="like($index)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{movies[$index].likes}}</p>
+							  <p class="dislikes" ng-click="dislike($index)"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{movies[$index].dislikes}}</p>
+							</div>
+					</div> 
 				</div>
-      </div>
-		</div>
+
 	
-		<ul>
-				<li ng-repeat="movie in movies">
-					{{movies}}
-				 </li>
-			</ul>
-			<div class="rating">
-					<p class="likes" ng-click="plusOne($index)">+ {{ product.likes }} </p>
-					<p class="dislikes" ng-click="minusOne($index)">- {{ product.dislikes }}</p>
-					<p class="posters" ng-click="posterClick($index)"></p>
-			</div>
     <div class="footer">
       <div class="container">
 			
@@ -77,7 +65,7 @@
 			
     </div>
 
-  
+
   	<!-- Modules -->
 	<script type="text/javascript" src="js/app.js"></script>
 	 
