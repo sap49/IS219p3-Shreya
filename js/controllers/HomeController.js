@@ -88,55 +88,56 @@ app.controller('HomeController', ['$scope', function($scope) {
       likes:	812,
       dislikes:	101,
       posterindex: 0
-	},
-	{
-      title:	'Deep Impact', 
-      iscore:	6.1,
-      rating:	'PG-13',
-      runtime:	120,
-      released:	new Date('1998'),
-      country:	'USA',
-      posters:	['img/Deepimpact.jpg','img/Deepimpact2.jpg'],
-      imdb:		'http://www.imdb.com/title/tt0120647/?ref_=nv_sr_1',
-      website:	'https://www.facebook.com/Deep-Impact-50528340969/',
+      },
+      {
+      title:	'Chak De India', 
+      iscore:	8.2,
+      rating:	'NR',
+      runtime:	153,
+      released:	new Date('2007'),
+      country:	'INDIA',
+      posters:	['img/cdi.jpg','img/cdi2.jpg'],
+      imdb:		'https://www.imdb.com/title/tt0871510/?ref_=nm_knf_i4',
+      website:	'https://www.facebook.com/ChakDeIndia/',
       likes:	1021,
       dislikes:	122,
       posterindex: 0
-	},
+      },
       {
-      title:	'Speed', 
-      iscore:	8.9,
-      rating:	'R',
-      runtime:	116,
-      released:	new Date('1994'),
-      country:	'USA',
-      posters:	['img/Speed.jpg','img/Speed2.jpg'],
-      imdb:		'http://www.imdb.com/title/tt0111257/',
-      website:	'https://www.facebook.com/Speed50Mph/',
+      title:	'Padmaavat', 
+      iscore:	7.1,
+      rating:	'NR',
+      runtime:	164,
+      released:	new Date('2018'),
+      country:	'INDIA',
+      posters:	['img/padmaavat.jpg','img/padmaavat2.jpg'],
+      imdb:		'https://www.imdb.com/title/tt5935704/?ref_=nv_sr_1',
+      website:	'https://www.facebook.com/FilmPadmaavat/',
       likes:	828,
       dislikes:	127,
       posterindex: 0
 	},
       { 
-      title:	'Titanic', 
-      iscore:	7.8,
-      rating:	'PG-13',
-      runtime:	194,
-      released:	new Date('1993'),
-      country:	'USA',
-      posters:	['img/titanic.jpg', 'img/titanic2.jpg'],
-      imdb:		'http://www.imdb.com/title/tt0120338/?ref_=nv_sr_2',
-      website:	'https://www.facebook.com/TitanicMovie/',
-      likes:	207706,
-      dislikes:	23908,
+      title:	'Golmaal', 
+      iscore:	7.4,
+      rating:	'NR',
+      runtime:	150,
+      released:	new Date('2006','08','10', ' 17'),
+      country:	'INDIA',
+      posters:	['img/gm.jpg', 'img/gm2.jpg'],
+      imdb:		'https://www.imdb.com/title/tt0495034/?ref_=fn_tt_tt_5',
+      website:	'https://www.facebook.com/GolmaalMovie/',
+      likes:	2077,
+      dislikes:	239,
       posterindex: 0
-      }	
+      },
+	
   ];
   
 	
 	/* ADD VARIABLES FOR STEP 3 HERE */
 	
-      $scope.title = "Shreya's Top 8 Movies";
+      $scope.title = "IMDB + Shreya's Top 8 Movies";
       $scope.owner = "Shreya";
       $scope.github = "https://github.com/sap49/IS219p3-Shreya";
 	
